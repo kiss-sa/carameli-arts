@@ -1,0 +1,14 @@
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "Carameli Arts"
+theme: gallery
+
+taxonomies:
+  category: categories
+  tag: tags
+
+params:
+  socialIcons:
+    instagram: "https://www.instagram.com/"
+    email: "mailto:user@example.com"
+  theme: light

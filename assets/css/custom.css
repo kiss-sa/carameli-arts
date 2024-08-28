@@ -1,12 +1,146 @@
 :root {
-    --surface-1-light: #ffffff;
-    --surface-2-light: #dee2e6;
-    --text-1-light: #030507;
-    --text-2-light: #868e96;
-    --surface-1-dark: #16191d;
-    --surface-2-dark: #495057;
-    --text-1-dark: #f8f9fa;
-    --text-2-dark: #868e96;
+  --color-primary:  #290D55;
+
+  --color-surface-100: #C9E9FE;
+  /* --color-surface-100: #090E22; */
+  --color-surface-200:  #212537;
+
+  --color-secondary:  #cdf4f0;
+  --color-accent:  #8ef9fe;
+  
+  --surface-1-light: #F0F1EA;
+  --surface-2-light: #A08DA2;
+
+  --surface-1-dark: var(--color-surface-100);
+  --surface-2-dark: var(--color-surface-200);
+
+  --text-1: #474c89; 
+  --text-2: #24104D; 
+
+  --text-1-dark: #E0E0E0;
+  --text-2-dark: #D0D0D0;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&display=swap');
+
+.lobster {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merienda {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1, h2 {
+  font-family: "Lobster Two";
+  color: var(--color-primary)
+}
+
+body {
+  font-family: "Merienda"; 
+}
+
+body > menu {
+  font-family: merienda;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 2rem auto 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  max-width: 768px;
+  /* color: var(--text-2); */
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  user-select: none;
+  text-align: center;
+
+  li {
+    display: inline;
+    float: left;
   }
 
+  a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
 
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--color-accent);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+body > header {
+  justify-content: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+}
+
+.header-container {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    font-family: "Lobster Two";
+    color: var(--color-primary); 
+  }
+
+  a {
+    display:inline-block
+  }
+}
+
+.header-content,
+.logo-container, 
+.spacer {
+    flex: 1;
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container .logo {
+  max-width: 75%;
+  height: auto;
+}

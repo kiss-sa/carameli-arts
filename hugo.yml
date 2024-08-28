@@ -1,4 +1,4 @@
-baseURL: "https://example.org/"
+baseURL: "http://carameli-arts.com/"
 languageCode: "en-us"
 title: "Carameli Arts"
 theme: gallery
@@ -7,8 +7,31 @@ taxonomies:
   category: categories
   tag: tags
 
+menu:
+  main:
+    - identifier: home
+      name: home
+      url: /
+      weight: -1
+
+    - identifier: arts
+      name: arts
+      url: /sketches/
+      weight: 20
+
+    - identifier: comission
+      name: commission
+      url: /commission/
+      weight: 30
+
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 40
+
 params:
+  meta:
+    favicon: false
   socialIcons:
-    instagram: "https://www.instagram.com/"
-    email: "mailto:user@example.com"
-  theme: light
+    instagram: "https://www.instagram.com/carameli_arts/"
+    email: "mailto:melanie.weissl@carameli-arts.com"

@@ -2,7 +2,7 @@ baseURL: "http://carameli-arts.com/"
 languageCode: "en-us"
 title: "Carameli Arts"
 # theme: gallery
-publishDir: /var/www/carameli-arts.com/
+# publishDir: /var/www/carameli-arts.com/
 noTimes: true
 # theme: gallery
 

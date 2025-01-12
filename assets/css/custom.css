@@ -1,21 +1,21 @@
 :root {
-  --color-primary:  #290D55;
+  --color-primary: #290D55;
 
   --color-surface-100: #C9E9FE;
   /* --color-surface-100: #090E22; */
-  --color-surface-200:  #212537;
+  --color-surface-200: #212537;
 
-  --color-secondary:  #cdf4f0;
-  --color-accent:  #8ef9fe;
-  
+  --color-secondary: #cdf4f0;
+  --color-accent: #8ef9fe;
+
   --surface-1-light: #F0F1EA;
   --surface-2-light: #A08DA2;
 
   --surface-1-dark: var(--color-surface-100);
   --surface-2-dark: var(--color-surface-200);
 
-  --text-1: #474c89; 
-  --text-2: #24104D; 
+  --text-1: #474c89;
+  --text-2: #24104D;
 
   --text-1-dark: #E0E0E0;
   --text-2-dark: #D0D0D0;
@@ -43,16 +43,18 @@
 }
 
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Lobster Two";
-  color: var(--color-primary)
+  color: var(--color-primary);
+  font-size: 24px;
 }
 
 body {
-  font-family: "Merienda"; 
+  font-family: "Merienda";
 }
 
-body > menu {
+body>menu {
   font-family: merienda;
 
   display: flex;
@@ -102,12 +104,17 @@ body > menu {
     transform-origin: left;
     transform: scaleX(1);
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
-body > header {
+body>header {
   justify-content: center;
   padding-left: 1.5rem;
-  padding-right: 1.5rem; 
+  padding-right: 1.5rem;
 }
 
 .header-container {
@@ -120,18 +127,18 @@ body > header {
 
   .btn {
     font-family: "Lobster Two";
-    color: var(--color-primary); 
+    color: var(--color-primary);
   }
 
   a {
-    display:inline-block
+    display: inline-block
   }
 }
 
 .header-content,
-.logo-container, 
+.logo-container,
 .spacer {
-    flex: 1;
+  flex: 1;
 }
 
 
@@ -146,7 +153,7 @@ body > header {
 }
 
 .card {
-  & > img {
+  &>img {
     object-position: top;
   }
 }

@@ -1,0 +1,40 @@
+<footer>
+  <div style="text-align: center; margin-top: 50px;">
+    <a href="#top" id="jumpToTopBtn" class="jump-to-top-button" style="text-decoration: none; font-size: 8pt;">
+      back to top
+    </a>
+  </div>
+
+  {{ partialCached "social-icons.html" . }}
+  <section>
+    {{ .Site.Copyright }}
+    {{ range .Site.Menus.footer }}
+    <a {{ with .Params.rel -}}rel="{{ . }}" {{ end -}} href="{{ .URL }}">
+      {{ .Name }}
+    </a>
+    {{ end }}
+  </section>
+</footer>
+
+<style>
+  .jump-to-top-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var jumpToTopBtn = document.getElementById('jumpToTopBtn');
+
+    jumpToTopBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>

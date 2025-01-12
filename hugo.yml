@@ -2,6 +2,8 @@ baseURL: "http://carameli-arts.com/"
 languageCode: "en-us"
 title: "Carameli Arts"
 theme: gallery
+publishDir: /var/www/carameli-arts.com/ 
+noTimes: true
 
 taxonomies:
   category: categories
@@ -14,20 +16,25 @@ menu:
       url: /
       weight: -1
 
-    - identifier: arts
-      name: arts
-      url: /sketches/
+    - identifier: portfolio
+      name: portfolio
+      url: /portfolio/
       weight: 20
 
-    - identifier: comission
-      name: commission
-      url: /commission/
+    - identifier: Sheet
+      name: commission examples
+      url: /sheet/
       weight: 30
+
+    - identifier: terms
+      name: terms of service
+      url: /terms/
+      weight: 40
 
     - identifier: about
       name: about
       url: /about/
-      weight: 40
+      weight: 50
 
 params:
   meta:
@@ -35,5 +42,5 @@ params:
   socialIcons:
     instagram: "https://www.instagram.com/carameli_arts/"
     email: "mailto:melanie.weissl@carameli-arts.com"
-    kofi: "https://kofi.com"
-    x: "https://x.com"
+    kofi: "https://ko-fi.com/carameliarts"
+    x: "https://twitter.com/Carameli_arts"

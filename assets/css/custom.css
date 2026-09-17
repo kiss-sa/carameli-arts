@@ -1,11 +1,12 @@
 :root {
-  --color-primary: #290D55;
+  /* --color-primary and --color-secondary now come from data/theme.json
+     (see assets/css/generated-theme.css) — don't redefine them here,
+     or they'll silently shadow whatever is set there. */
 
   --color-surface-100: #C9E9FE;
   /* --color-surface-100: #090E22; */
   --color-surface-200: #212537;
 
-  --color-secondary: #cdf4f0;
   --color-accent: #8ef9fe;
 
   --surface-1-light: #F0F1EA;
@@ -26,8 +27,9 @@
   color: var(--color-primary);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&display=swap');
+/* Lobster Two and Merienda are already loaded via data/theme.json's
+   fonts.font_family (see themes/roxo-hugo/.../essentials/style.html),
+   so no separate @import is needed here. */
 
 .lobster {
   font-family: "Lobster Two", sans-serif;
@@ -156,4 +158,13 @@ body>header {
   &>img {
     object-position: top;
   }
+}
+
+/* Header and footer both render the site logo through the
+   `.navbar-brand` link (see themes/roxo-hugo/layouts/_partials/logo.html),
+   which ships with no size constraint on the <img>. */
+.navbar-brand img {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
 }

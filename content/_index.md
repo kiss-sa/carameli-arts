@@ -1,6 +1,26 @@
 ---
-featured_image: logo.png
+banner:
+  title: Melanie Weissl
+  content: weissl.melanie@carameli-arts.com
+  image: /images/placeholder.jpg
+  button_primary:
+    enable: true
+    label: Connect With Me
+    link: /about
+  button_secondary:
+    enable: true
+    label: See My Work
+    link: /portfolio
+# featured_image: logo.png
+
+recent_works:
+  enable: true
+  title: Recent Projects
+  description: Some examples of past projects and commissions.
+  dir: highlights
 ---
+
+
 
 ![Welcome Header](Welcome.png)
 

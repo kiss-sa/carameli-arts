@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "name": "Instagram",
+      "icon": "fab fa-instagram",
+      "link": "https://www.instagram.com/carameli_arts/"
+    },
+    {
+      "name": "X",
+      "icon": "fab fa-x-twitter",
+      "link": "https://twitter.com/Carameli_arts"
+    },
+    {
+      "name": "Ko-fi",
+      "icon": "fas fa-mug-hot",
+      "link": "https://ko-fi.com/carameliarts"
+    },
+    {
+      "name": "E-Mail",
+      "icon": "fas fa-envelope",
+      "link": "mailto:melanie.weissl@carameli-arts.com"
+    }
+  ]
+}

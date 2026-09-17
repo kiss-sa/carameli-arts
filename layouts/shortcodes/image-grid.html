@@ -1,0 +1,27 @@
+{{/*
+  Image grid with lightbox, for use inside a page's markdown content.
+
+  Usage:
+    {{< image-grid dir="portfolio" >}}
+    {{< image-grid dir="portfolio" title="Recent Projects" description="..." cols="4" >}}
+
+  Params:
+    dir         (required) folder under assets/images/ to pull images from
+    title       (optional) section heading
+    description (optional) text under the heading
+    cols        (optional) max columns on large screens, 2-6, default 4
+
+  Note: the homepage (content/_index.md) is rendered by
+  themes/roxo-hugo/layouts/home.html, which never outputs .Content — a
+  shortcode placed there won't render. That page instead calls
+  layouts/_partials/components/image-grid.html directly; this shortcode
+  wraps the same partial for pages that do render their markdown body
+  (about, terms, etc.).
+*/}}
+
+{{ partial "components/image-grid.html" (dict
+  "Dir" (.Get "dir")
+  "Title" (.Get "title")
+  "Description" (.Get "description")
+  "Cols" (.Get "cols")
+) }}

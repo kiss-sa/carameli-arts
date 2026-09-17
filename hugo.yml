@@ -1,10 +1,9 @@
 baseURL: "http://carameli-arts.com/"
-languageCode: "en-us"
+locale: "en-US"
 title: "Carameli Arts"
-# theme: gallery
 # publishDir: /var/www/carameli-arts.com/
 noTimes: true
-# theme: gallery
+theme: "roxo-hugo"
 
 taxonomies:
   category: categories
@@ -22,24 +21,43 @@ menu:
       url: /portfolio/
       weight: 20
 
-    - identifier: Sheet
-      name: commission examples
-      url: /sheet/
+    - identifier: Sketches
+      name: sketches
+      url: /sketches/
       weight: 30
-
-    - identifier: terms
-      name: terms of service
-      url: /terms/
-      weight: 40
 
     - identifier: about
       name: about
       url: /about/
       weight: 50
+  footer_01: 
+    - name: "Contact Info" # This acts as the section title
+      title: true     # Flag to identify this as a section title
+      weight: 0       # Lower weight to appear first
+    - name: "713 Elmwood St. Prior Lake, MN 55372"
+      url: "https://www.google.com/maps?q=713+Elmwood+St,+Prior+Lake,+MN+55372"
+      weight: 1
+# Sitemap section
+  footer_02:
+    - name: "Sitemap" # This acts as the section title
+      title: true      # Flag to identify this as a section title
+      weight: 0        # Lower weight to appear first
 
-module:
-  imports:
-    - path: github.com/nicokaiser/hugo-theme-gallery/v4
+    - name: "Elements"
+      url: "/elements"
+      weight: 1
+
+    - name: "Projects"
+      url: "/projects"
+      weight: 2
+
+    - name: "Blog"
+      url: "/blog"
+      weight: 3
+
+    - name: "Contact"
+      url: "/contact"
+      weight: 4
 
 params:
   meta:
@@ -49,3 +67,87 @@ params:
     email: "mailto:melanie.weissl@carameli-arts.com"
     kofi: "https://ko-fi.com/carameliarts"
     x: "https://twitter.com/Carameli_arts"
+  plugins:
+    css:
+      - link: "plugins/swiper/swiper-bundle.css"
+        lazy: true
+      - link: "plugins/glightbox/glightbox.css"
+        lazy: true
+      - link: "plugins/font-awesome/v6/brands.css"
+        lazy: true
+      - link: "plugins/font-awesome/v6/solid.css"
+        lazy: true
+      - link: "plugins/font-awesome/v6/icons.css"
+        lazy: true
+    js:
+      - link: "js/search.js"
+        lazy: false
+      - link: "plugins/swiper/swiper-bundle.js"
+        lazy: false
+      - link: "plugins/glightbox/glightbox.js"
+        lazy: true
+      - link: "js/gallery-slider.js"
+        lazy: true
+      - link: "plugins/cookie.js"
+        lazy: false
+      - link: "js/accordion.js"
+        lazy: true
+      - link: "js/tab.js"
+        lazy: true
+      - link: "js/modal.js"
+        lazy: true
+      - link: "plugins/youtube-lite.js"
+        lazy: true
+  logo: "images/logo.png"
+  footer:
+    logo: "images/logo-footer.png"
+    title: "We help brands"
+    description: "develop design solutions produce valuable cultural content create fresh brand experience"
+    back_to_top: "Back to top"
+
+  
+
+security:
+  exec:
+    allow:
+      - "^(dart-)?sass$"
+      - "^go$"
+      - "^git$"
+      - "^node$"
+      - "^postcss$"
+      - "^tailwindcss$"
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.158.0"
+  mounts:
+    - source: assets
+      target: assets
+    - source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json
+      disableWatch: true
+  imports:
+    - path: github.com/gethugothemes/hugo-modules/llms-txt
+    - path: github.com/gethugothemes/hugo-modules/pwa
+    - path: github.com/gethugothemes/hugo-modules/images
+    - path: github.com/gethugothemes/hugo-modules/videos
+    - path: github.com/gethugothemes/hugo-modules/icons/font-awesome
+    - path: github.com/gethugothemes/hugo-modules/gzip-caching
+    - path: github.com/gethugothemes/hugo-modules/adsense
+    - path: github.com/gethugothemes/hugo-modules/accordion
+    - path: github.com/gethugothemes/hugo-modules/table-of-contents
+    - path: github.com/gethugothemes/hugo-modules/tab
+    - path: github.com/gethugothemes/hugo-modules/modal
+    - path: github.com/gethugothemes/hugo-modules/gallery-slider
+    - path: github.com/gethugothemes/hugo-modules/components/preloader
+    - path: github.com/gethugothemes/hugo-modules/components/social-share
+    - path: github.com/gethugothemes/hugo-modules/components/cookie-consent
+    - path: github.com/gethugothemes/hugo-modules/components/custom-script
+    - path: github.com/gethugothemes/hugo-modules/components/render-link
+    - path: github.com/gethugothemes/hugo-modules/shortcodes/button
+    - path: github.com/gethugothemes/hugo-modules/shortcodes/notice
+    - path: github.com/gethugothemes/hugo-modules/shortcodes/mermaid
+    - path: github.com/gethugothemes/hugo-modules/seo-tools/basic-seo
+    - path: github.com/gethugothemes/hugo-modules/seo-tools/site-verifications
+    - path: github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager

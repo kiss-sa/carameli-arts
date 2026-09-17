@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About the artist
 weight: 90
 layout: "about"
